@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 학업
-nav_order: 1
+nav_order: 2
 ---
 
 # 🎓 학업 정리

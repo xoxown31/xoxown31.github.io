@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 공모전
-nav_order: 3
+nav_order: 4
 ---
 
 # 🏆 공모전 참가 기록
