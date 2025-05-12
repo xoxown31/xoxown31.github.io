@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Xoxown31's Dev Blog
+title: 홈
 nav_order: 1
 ---
 
@@ -16,7 +16,7 @@ nav_order: 1
 
 - 대학에서 학습한 전공 과목 및 정리 노트
 - 자료구조, 운영체제, 객체지향, AI 이론 등 포함  
-➡️ [학업 문서 보기](docs/academic.md)
+➡️ [학업 문서 보기](docs/academics.md)
 
 ---
 
