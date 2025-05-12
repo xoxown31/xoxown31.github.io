@@ -15,8 +15,3 @@ has_children: true
 - 이해하기: 컴퓨터 과학의 기본 개념과 원리를 이해합니다.
 - 분석하기: 문제를 해결하기 위한 알고리즘과 자료구조를 분석합니다.
 - 구현하기: 알고리즘과 자료구조를 실제로 구현해봅니다.
-
-## Contents
-➡️ [🖥️ Operating Systems](docs/academics/cs-basics/os/os.md)
-➡️ [📦 Object-Oriented Programming](docs/academics/cs-basics/oop/oop.md)
-➡️ [🧮 Algorithms](docs/academics/cs-basics/algorithms/algorithms.md)

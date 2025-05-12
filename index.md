@@ -4,9 +4,36 @@ title: 홈
 nav_order: 1
 ---
 
-# 👋 Welcome to Xoxown31's Dev Blog
+# 👋 Welcome to **xoxown31**'s Dev Blog
 
-이 블로그는 학업 정리, 프로젝트, 공모전 경험을 기록한 기술 기반 포트폴리오입니다.
+학업, 개인 프로젝트, 공모전 경험을 기술 중심으로 정리한 포트폴리오입니다.  
+> 🧠 _꾸준한 학습, 실용적인 개발, 그리고 현장 중심 사고._
+
+---
+
+## 🧑‍💻 프로필
+
+- **Level**: 26
+- **관심 분야**:
+  - Data Analysis
+  - Machine Learning
+  - Competitive programming
+  - Logistics & Process Innovation
+- **학력**:
+  - **전공**: AI 컴퓨터공학 심화
+  - **학교**: 한동대학교
+  - **졸업 예정일**: 2027년 2월
+
+---
+
+## 🛠️ 기술 스택
+
+| 분류       | 사용 기술 |
+|------------|-----------|
+| **Language**  | Python, Java, C/C++ |
+| **Framework** | Django, Spring |
+| **Tools**     | Git, Jupyter, VSCode |
+| **Database**  | SQLite3 |
 
 ---
 
@@ -14,32 +41,35 @@ nav_order: 1
 
 ### 🎓 학업 (Academic)
 
-- 대학에서 학습한 전공 과목 및 정리 노트
-- 자료구조, 운영체제, 객체지향, AI 이론 등 포함  
-➡️ [학업 문서 보기](docs/academics.md)
+> 대학교에서 학습한 전공 과목과 핵심 개념을 정리한 섹션입니다.  
+> 운영체제, 알고리즘, 객체지향, AI 이론 등을 포함합니다.
+
+➡️ [학업 문서 보기](docs/academics/academics.md)
 
 ---
 
 ### 💻 개인 프로젝트 (Personal Projects)
 
-- Python, Java 기반 실습 프로젝트
-- Django, Jekyll, 자동화 스크립트 등  
-➡️ [개인 프로젝트 보기](docs/projects.md)
+> Python, Java 기반의 실습 프로젝트 중심입니다.  
+> Django, Jekyll, 자동화 스크립트 등 실무 응용 사례 포함.
+
+➡️ [프로젝트 보기](docs/projects.md)
 
 ---
 
 ### 🏆 공모전 (Competitions)
 
-- 데이터 분석, 알고리즘 경진대회, 공공데이터 활용 등 참여 경험 기록  
-➡️ [공모전 사례 보기](docs/competitions.md)
+> 데이터 분석, 알고리즘 경진대회, 공공데이터 활용 공모전 등의 참가 경험 정리입니다.
+
+➡️ [공모전 보기](docs/competitions.md)
 
 ---
 
 ## 🔗 외부 링크
 
-- [GitHub](https://github.com/xoxown31)
-- [공식 이력서 PDF]() *(선택)*
+- [🔗 GitHub Profile](https://github.com/xoxown31)
+- [📄 이력서 PDF]() *(선택 사항)*
 
 ---
 
-> 📌 꾸준히 업데이트하며 경험을 정리해갑니다.
+> 📌 _기록은 성장의 흔적입니다. 계속해서 업데이트할 예정입니다._
