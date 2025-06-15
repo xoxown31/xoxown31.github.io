@@ -4,7 +4,7 @@ title: 홈
 nav_order: 1
 ---
 
-# 👋 Welcome to **xoxown31**'s Dev Blog
+# 안녕하세요, 저는 박태주입니다.
 
 학업, 개인 프로젝트, 공모전 경험을 기술 중심으로 정리한 포트폴리오입니다.  
 > 🧠 _꾸준한 학습, 실용적인 개발, 그리고 현장 중심 사고._
@@ -13,12 +13,12 @@ nav_order: 1
 
 ## 🧑‍💻 프로필
 
-- **Level**: 26
 - **관심 분야**:
   - Data Analysis
   - Machine Learning
   - Competitive programming
   - Logistics & Process Innovation
+
 - **학력**:
   - **전공**: AI 컴퓨터공학 심화
   - **학교**: 한동대학교
@@ -57,7 +57,7 @@ nav_order: 1
 
 ---
 
-### 🏆 공모전 (Competitions)
+### 🏆 공모전 & 수상 (Competitions)
 
 > 데이터 분석, 알고리즘 경진대회, 공공데이터 활용 공모전 등의 참가 경험 정리입니다.
 
@@ -68,7 +68,6 @@ nav_order: 1
 ## 🔗 외부 링크
 
 - [🔗 GitHub Profile](https://github.com/xoxown31)
-- [📄 이력서 PDF]() *(선택 사항)*
 
 ---
 
