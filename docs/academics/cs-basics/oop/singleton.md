@@ -1,0 +1,67 @@
+---
+layout: default
+title: Singleton Pattern
+parent: Object-Oriented Programming
+grand_parent: Computer Science Basics
+---
+
+# 🧱 Singleton Pattern
+
+## 이론
+
+싱글턴 패턴은 클래스의 인스턴스가 오직 하나만 존재하도록 보장하는 디자인 패턴입니다.
+이 패턴은 전역 상태를 관리하거나, 리소스의 공유를 제어할 때 유용합니다.
+
+예를 들어, 설정 관리, 데이터베이스 연결 등에서 싱글턴 패턴을 사용하여
+애플리케이션 전체에서 동일한 인스턴스를 공유할 수 있습니다.
+
+## 특징
+
+- **유일성 보장**: 클래스의 인스턴스가 하나만 생성되도록 보장합니다.
+- **전역 접근**: 인스턴스에 전역적으로 접근할 수 있는 방법을 제공합니다.
+- **지연 초기화**: 인스턴스가 필요할 때까지 생성하지 않을 수 있습니다.
+- **스레드 안전성**: 멀티스레드 환경에서도 안전하게 사용할 수 있도록 구현할 수 있습니다.
+- **상속 불가**: 싱글턴 클래스는 상속을 허용하지 않는 것이 일반적입니다.
+- **직렬화 지원**: 직렬화 시에도 인스턴스가 하나만 유지되도록 구현할 수 있습니다.
+
+## 예제 코드
+
+예를 들어 유니티에서 게임을 만든다고 생각해봅시다.
+이 때, 게임의 설정을 관리하는 `GameSettings` 클래스를 싱글턴으로 구현할 수 있습니다.
+
+```csharp
+public class GameSettings
+{
+    private static GameSettings instance;
+
+    // 생성자를 private으로 설정하여 외부에서 인스턴스를 생성할 수 없도록 합니다.
+    private GameSettings() { }
+
+    public static GameSettings Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = new GameSettings();
+            }
+            return instance;
+        }
+    }
+
+    public int Volume { get; set; }
+    public string Language { get; set; }
+}
+```
+
+게임 설정 뿐만 아니라 인벤토리 시스템이나 게임 매니저 등
+다양한 시스템에서도 싱글턴 패턴을 적용할 수 있습니다.
+
+## 결론
+
+싱글턴 패턴은 디자인 패턴에서 가장 기본적인 패턴입니다.
+다른 디자인 패턴을 사용할 때도 싱글턴 패턴을 함께 사용하는 경우가 많습니다.
+
+이 패턴을 적절히 사용하면 애플리케이션의 구조를 단순화하고,
+전역 상태를 효과적으로 관리할 수 있습니다.
+그러나 남용하지 않도록 주의해야 합니다.
