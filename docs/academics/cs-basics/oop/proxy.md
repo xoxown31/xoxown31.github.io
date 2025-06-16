@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Singleton Pattern
+title: Proxy Pattern
 parent: Object-Oriented Programming
 grand_parent: Computer Science Basics
 ---
