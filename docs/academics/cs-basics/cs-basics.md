@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Computer Science Basics
-parent: Academics
+parent: 학업
 nav_order: 1
 has_children: true
 ---

@@ -2,7 +2,7 @@
 layout: default
 title: Object-Oriented Programming
 parent: Computer Science Basics
-grand_parent: Academics
+grand_parent: 학업
 nav_order: 2
 has-children: true
 ---
