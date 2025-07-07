@@ -3,9 +3,30 @@ description: portfolio & blog
 theme: just-the-docs
 url: "https://xoxown31.github.io"
 
+# Just the Docs 기본 설정
+color_scheme: dark
+search_enabled: true
+nav_enabled: true
+heading_anchors: true
+
+# 수식(MathJax) 지원
+math: mathjax
+
+# 우상단 GitHub 링크
 just_the_docs:
-  color_scheme: dark
   aux_links:
     GitHub: https://github.com/xoxown31/xoxown31.github.io
+  color_scheme: dark
 
-math: mathjax
+# Callouts(경고/정보 등) 예시
+callouts:
+  warning:
+    title: 경고
+    color: red
+  info:
+    title: 정보
+    color: blue
+
+# 필요시 Mermaid 다이어그램 지원 예시
+# mermaid:
+#   version: "9.1.3"
