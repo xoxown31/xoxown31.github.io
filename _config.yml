@@ -8,5 +8,4 @@ just_the_docs:
   aux_links:
     GitHub: https://github.com/xoxown31/xoxown31.github.io
 
-math:
-  renderer: "mathjax"
+math: mathjax
