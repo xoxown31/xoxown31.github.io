@@ -7,3 +7,6 @@ just_the_docs:
   color_scheme: dark
   aux_links:
     GitHub: https://github.com/xoxown31/xoxown31.github.io
+
+math:
+  renderer: "mathjax"
