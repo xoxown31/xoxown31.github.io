@@ -3,7 +3,7 @@ layout: default
 title: Algorithms Overview
 parent: Algorithms
 grand_parent: Computer Science Basics
-nav_order: 1
+nav_order: 2
 ---
 
 # 🧮 Algorithms Overview
