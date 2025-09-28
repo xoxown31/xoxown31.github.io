@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Mathematics
-parent: Academics
+parent: 학업
 nav_order: 3
 has_children: true
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: AI & Data
-parent: Academics
+parent: 학업
 nav_order: 2
 has_children: true
 ---

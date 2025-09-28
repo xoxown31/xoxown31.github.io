@@ -44,7 +44,7 @@ nav_order: 1
 > 대학교에서 학습한 전공 과목과 핵심 개념을 정리한 섹션입니다.  
 > 운영체제, 알고리즘, 객체지향, AI 이론 등을 포함합니다.
 
-➡️ [학업 문서 보기](docs/academics/academics.md)
+➡️ [학업 문서 보기](docs/academics/academics.html)
 
 ---
 
@@ -53,7 +53,7 @@ nav_order: 1
 > Python, Java 기반의 실습 프로젝트 중심입니다.  
 > Django, Jekyll, 자동화 스크립트 등 실무 응용 사례 포함.
 
-➡️ [프로젝트 보기](docs/projects.md)
+➡️ [프로젝트 보기](docs/projects.html)
 
 ---
 
@@ -61,7 +61,7 @@ nav_order: 1
 
 > 데이터 분석, 알고리즘 경진대회, 공공데이터 활용 공모전 등의 참가 경험 정리입니다.
 
-➡️ [공모전 보기](docs/competitions.md)
+➡️ [공모전 보기](docs/competitions.html)
 
 ---
 

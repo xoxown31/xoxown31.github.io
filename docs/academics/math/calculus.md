@@ -2,7 +2,7 @@
 layout: default
 title: Calculus
 parent: Mathematics
-grand_parent: Academics
+grand_parent: 학업
 nav_order: 1
 ---
 # ∫ Calculus

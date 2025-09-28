@@ -14,7 +14,7 @@ nav_order: 3
 - Java, MVC + Command 패턴
 - 예약 생성, 로그인/회원가입, 항공권 발권 기능 포함
 
-### 📊 AutoQuizGen (자동 퀴즈 생성기)
+### 📊 QuizLinker (자동 퀴즈 생성기)
 - Python, Django, ChatGPT API
 - 대학 강의 PDF를 읽어 퀴즈 자동 생성 → HTML + 자동 채점
 
