@@ -22,17 +22,17 @@ has_children: true
 
 - **사건(Event)**: 표본 공간의 부분집합. 예: 주사위를 던져 짝수가 나오는 사건은 $$ A = {2, 4, 6} $$. 확률은 **사건**에 할당된다.
 
-- **조건부 확률(Conditional Probability)**: 사건 A가 발생한 상태에서 사건 B가 발생할 확률. 기호: $$ P(B|A) = \frac{P(A ∩ B)}{P(A)} $$, 단 $$ P(A) > 0 $$. 이는 새로운 표본 공간을 정의하는 것과 같다. 기존의 확률 또한 전체 확률에 대한 조건부 확률과 같다.
+- **조건부 확률(Conditional Probability)**: 사건 A가 발생한 상태에서 사건 B가 발생할 확률. 기호: $$ P(B \mid A) = \frac{P(A ∩ B)}{P(A)} $$, 단 $$ P(A) > 0 $$. 이는 새로운 표본 공간을 정의하는 것과 같다. 기존의 확률 또한 전체 확률에 대한 조건부 확률과 같다.
 
-- **체인 룰(Chain Rule)**: 여러 사건의 결합 확률을 계산하는 방법. $$ P(A_1 A_2 ... A_n) = P(A_1)P(A_2|A_1)P(A_3|A_1 A_2)...P(A_n|A_1 A_2 ... A_{n-1}) $$.
+- **체인 룰(Chain Rule)**: 여러 사건의 결합 확률을 계산하는 방법. $$ P(A_1 A_2 ... A_n) = P(A_1)P(A_2 \mid A_1)P(A_3 \mid A_1 A_2)...P(A_n \mid A_1 A_2 ... A_{n-1}) $$.
 
 - **독립 사건(Independent Events)**: 사건 A와 B가 서로 독립일 때, $$ P(AB) = P(A)P(B) $$.
 
-- **전확률 법칙(Law of Total Probability)**: 사건 B에 대한 전체 확률을 구하는 방법. $$ P(B) = \sum_{i} P(B|A_i)P(A_i) $$, 여기서 $$ {A_i} $$는 서로 배반인 사건들의 집합이며, $$ \bigcup_i A_i = S $$.
+- **전확률 법칙(Law of Total Probability)**: 사건 B에 대한 전체 확률을 구하는 방법. $$ P(B) = \sum_{i} P(B \mid A_i)P(A_i) $$, 여기서 $$ {A_i} $$는 서로 배반인 사건들의 집합이며, $$ \bigcup_i A_i = S $$.
 
-- **베이즈 정리(Bayes' Theorem)**: 조건부 확률을 계산하는 방법. $$ P(A|B) = \frac{P(B|A)P(A)}{P(B)} $$, 단 $$ P(B) > 0 $$.
+- **베이즈 정리(Bayes' Theorem)**: 조건부 확률을 계산하는 방법. $$ P(A|B) = \frac{P(B \mid A)P(A)}{P(B)} $$, 단 $$ P(B) > 0 $$.
 
-- **조건부 독립(Conditional Independence)**: 사건 A와 B가 사건 C에 대해 조건부로 독립일 때, $$ P(AB|C) = P(A|C)P(B|C) $$.
+- **조건부 독립(Conditional Independence)**: 사건 A와 B가 사건 C에 대해 조건부로 독립일 때, $$ P(AB \mid C) = P(A \mid C)P(B \mid C) $$.
 
 - **쌍의 독립(Pairwise Independence)**: 여러 사건들이 쌍으로 독립일 때, 모든 쌍에 대해 독립성이 성립함. 예: 세 사건 A, B, C가 쌍으로 독립이면, $$ P(AB) = P(A)P(B) $$, $$ P(AC) = P(A)P(C) $$, $$ P(BC) = P(B)P(C) $$.
 
@@ -46,7 +46,7 @@ has_children: true
 
 - **조합(Combination)**: 서로 다른 $$n$$개의 원소 중에서 $$r$$개를 선택하는 경우의 수. 기호: $$ C(n, r) = \frac{n!}{r!(n-r)!} $$.
 
-- **이항 계수(Binomial Coefficient)**: $$ C(n, r) $$는 이항 계수로도 불리며, 이항 정리에서 사용됨. 예: $$(x + y)^n = \sum_{r=0}^{n} C(n, r) x^{n-r} y^r $$.
+- **이항 계수(Binomial Coefficient)**: $$ C(n, r) $$는 이항 계수로도 불리며, 이항 정리에서 사용됨. 예: $$ (x + y)^n = \sum_{r=0}^{n} C(n, r) x^{n-r} y^r $$
 
 - **베르누이 시행(Bernoulli Trial)**: 성공과 실패 두 가지 결과만 있는 독립적인 시행. 예: 동전 던지기, 주사위 던지기 등.
 
