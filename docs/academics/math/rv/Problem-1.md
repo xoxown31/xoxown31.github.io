@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Problem 1
-parent: Random Variable Theory
-grand_parent: Mathematics
-nav_order: 1
+parent: Problem
+grand_parent: Random Variable Theory
+nav_order: 3
 ---
 
 # Problem 1
