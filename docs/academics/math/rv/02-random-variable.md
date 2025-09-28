@@ -35,7 +35,12 @@ has_children: true
 
 - **균등 분포(Uniform Distribution)**: 모든 값이 동일한 확률로 발생하는 분포입니다. 이산형 균등 분포는 주사위 던지기와 같은 경우에 해당하며, 연속형 균등 분포는 특정 구간 내에서 모든 값이 동일한 확률로 발생하는 경우에 해당합니다.
 
-- **정규 분포(Normal Distribution, Gaussian Distribution)**: 종 모양의 곡선으로 나타나는 분포로, 많은 자연 현상에서 나타납니다. 정규 분포는 평균과 표준 편차에 의해 완전히 정의되며, 중심 극한 정리에 의해 많은 독립적인 확률 변수의 합이 정규 분포에 가까워지는 경향이 있습니다. $$ N(\mu, \sigma^2) $$로 표기하며, $$ \mu $$는 평균, $$ \sigma^2 $$는 분산입니다. $$ G(x) = \integral_{-\infty}^{x} \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(t-\mu)^2}{2\sigma^2}} dt $$ 로 표현됩니다.
+- **정규 분포(Normal Distribution, Gaussian Distribution)**: 종 모양의 곡선으로 나타나는 분포로, 많은 자연 현상에서 나타납니다. 정규 분포는 평균과 표준 편차에 의해 완전히 정의되며, 중심 극한 정리에 의해 많은 독립적인 확률 변수의 합이 정규 분포에 가까워지는 경향이 있습니다. $$ N(\mu, \sigma^2) $$로 표기하며, $$ \mu $$는 평균, $$ \sigma^2 $$는 분산입니다. 
+  - **표준 정규 분포(Standard Normal Distribution)**: 평균이 0이고 분산이 1인 정규 분포입니다. 표준 정규 분포는 다른 정규 분포를 표준화하는 데 사용됩니다.
+  - **가우시안 함수(Gaussian Function)**: 정규 분포의 확률 밀도 함수를 나타내는 함수로, $$ f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x - \mu)^2}{2\sigma^2}} $$로 표현됩니다.
+  - **표준 정규 누적 분포 함수(Standard Normal CDF)**: 표준 정규 분포의 누적 분포 함수로, 특정 값 이하일 확률을 나타냅니다. $$ G(x) = \integral {-\infty}^{x} \frac{1}{\sqrt{2\pi}} e^{-\zeta^2/2} d\zeta $$로 표현되며, 정규 분포 CDF는 $$ F_X(x) = G(\frac{x - \mu}{\sigma}) $$로 변환됩니다.
+    - **Q함수(Q-function)**: 표준 정규 분포의 우측 꼬리 확률을 나타내는 함수로, $$ Q(x) = 1 - G(x) = \integral_{x}^{\infty} \frac{1}{\sqrt{2\pi}} e^{-\zeta^2/2} d\zeta $$로 표현됩니다.
+    - **예시**: $$ When X~N(-3,4), P[\vert X + 3 \vert < 2] = P[-5 < X < -1] = G(1) - G(-1) = 2G(1) - 1 $$
 
 - **지수 분포 (Exponential Distribution)**: 주로 대기 시간이나 수명과 같은 연속적인 사건의 발생 간격을 모델링하는 데 사용됩니다. 지수 분포는 단일 매개변수(λ)로 정의되며, λ는 사건이 발생하는 평균 속도를 나타냅니다.
 
