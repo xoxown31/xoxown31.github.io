@@ -7,4 +7,4 @@ has_children: true
 ---
 # 📐 Mathematics
 
-➡️ [∫ Calculus](docs/academics/math/calculus.md)
+➡️ [🎲 Random Variable Theory](docs/academics/math/rv.html)
