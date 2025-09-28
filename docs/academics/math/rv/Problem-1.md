@@ -3,7 +3,7 @@ layout: default
 title: Problem 1
 parent: Problem
 grand_parent: Random Variable Theory
-nav_order: 3
+nav_order: 1
 ---
 
 # Problem 1
