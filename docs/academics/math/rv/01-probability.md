@@ -24,13 +24,13 @@ has_children: true
 
 - **조건부 확률(Conditional Probability)**: 사건 A가 발생한 상태에서 사건 B가 발생할 확률. 기호: $$ P(B \mid A) = \frac{P(A ∩ B)}{P(A)} $$, 단 $$ P(A) > 0 $$. 이는 새로운 표본 공간을 정의하는 것과 같다. 기존의 확률 또한 전체 확률에 대한 조건부 확률과 같다.
 
-- **체인 룰(Chain Rule)**: 여러 사건의 결합 확률을 계산하는 방법. $$ P(A_1 A_2 ... A_n) = P(A_1)P(A_2 \mid A_1)P(A_3 \mid A_1 A_2)...P(A_n \mid A_1 A_2 ... A_{n-1}) $$.
+- **체인 룰(Chain Rule)**: 여러 사건의 결합 확률을 계산하는 방법. $$ P(A_1 A_2 ... A_n) = P(A_1)P(A_2 \mid A_1)...P(A_n \mid A_1 A_2 ... A_{n-1}) $$.
 
 - **독립 사건(Independent Events)**: 사건 A와 B가 서로 독립일 때, $$ P(AB) = P(A)P(B) $$.
 
 - **전확률 법칙(Law of Total Probability)**: 사건 B에 대한 전체 확률을 구하는 방법. $$ P(B) = \sum_{i} P(B \mid A_i)P(A_i) $$, 여기서 $$ {A_i} $$는 서로 배반인 사건들의 집합이며, $$ \bigcup_i A_i = S $$.
 
-- **베이즈 정리(Bayes' Theorem)**: 조건부 확률을 계산하는 방법. $$ P(A|B) = \frac{P(B \mid A)P(A)}{P(B)} $$, 단 $$ P(B) > 0 $$.
+- **베이즈 정리(Bayes' Theorem)**: 조건부 확률을 계산하는 방법. $$ P(A \mid B) = \frac{P(B \mid A)P(A)}{P(B)} $$, 단 $$ P(B) > 0 $$.
 
 - **조건부 독립(Conditional Independence)**: 사건 A와 B가 사건 C에 대해 조건부로 독립일 때, $$ P(AB \mid C) = P(A \mid C)P(B \mid C) $$.
 
