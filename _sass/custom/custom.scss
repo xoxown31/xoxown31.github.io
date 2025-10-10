@@ -1,33 +1,30 @@
-/* --- Answer Toggle minimal --- */
+/* callout 기본 스타일 유지 */
 blockquote.answer,
-blockquote.answer-title,
-p.answer,
-p.answer-title {
+p.answer {
   position: relative;
 }
 
-/* 타이틀 줄 (버튼 아님) */
-.answer-wrap {
-  display: flex;
-  align-items: center;
+/* 타이틀 (첫 번째 문단) */
+.answer-title-line {
   font-weight: 700;
   cursor: pointer;
+  display: flex;
+  align-items: center;
   user-select: none;
-  color: inherit;
 }
 
-/* 화살표 */
-.answer-wrap .caret::before {
+/* 화살표 추가 */
+.answer-title-line::before {
   content: "▸";
   display: inline-block;
   margin-right: .4rem;
   transition: transform .2s ease;
 }
-[data-open="true"] .answer-wrap .caret::before {
+[data-open="true"] .answer-title-line::before {
   transform: rotate(90deg);
 }
 
-/* 내용 */
+/* 본문 (2번째 이후 문단) */
 .answer-content {
   display: none;
   margin-top: .4rem;
@@ -38,6 +35,5 @@ p.answer-title {
 
 /* 인쇄 시 항상 표시 */
 @media print {
-  .answer-wrap::before { content: none; }
   .answer-content { display: block !important; }
 }
