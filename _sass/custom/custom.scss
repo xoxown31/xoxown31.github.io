@@ -1,44 +1,73 @@
-/* --- Answer callout toggle styles --- */
-blockquote.answer, blockquote.answer-title {
+/* --- Answer callout toggle styles (supports blockquote & p) --- */
+blockquote.answer,
+blockquote.answer-title,
+p.answer,
+p.answer-title {
   position: relative;
+  margin: .75rem 0;
   padding-top: .5rem; /* 버튼과 내용 사이 여백 */
 }
 
-/* 토글 버튼(콜아웃 상단에 삽입) */
-blockquote.answer .answer-toggle,
-blockquote.answer-title .answer-toggle {
-  display: inline-flex;
+/* 버튼/헤더 래퍼 */
+.answer-wrap {
+  display: flex;
   align-items: center;
   gap: .5rem;
-  cursor: pointer;
+}
+
+/* 토글 버튼(콜아웃 상단에 삽입) */
+.answer-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  appearance: none;
   border: 0;
   background: transparent;
-  font-weight: 700;
-  margin: 0 0 .25rem 0;
+  font: inherit;
+  font-weight: 600;
+  line-height: 1.2;
   padding: 0;
+  color: inherit;              /* callout 팔레트 색과 자연스럽게 조화 */
+  cursor: pointer;
 }
-
-/* 접힘/펼침 상태에 따른 콘텐츠 표시 */
-blockquote.answer .answer-content,
-blockquote.answer-title .answer-content {
-  display: none;
-  margin-top: .25rem;
+.answer-toggle:hover {
+  text-decoration: underline;  /* 시각적 피드백 */
 }
-
-blockquote.answer[data-open="true"] .answer-content,
-blockquote.answer-title[data-open="true"] .answer-content {
-  display: block;
+.answer-toggle:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 /* 캐럿 아이콘 */
-blockquote.answer .answer-toggle .caret::before,
-blockquote.answer-title .answer-toggle .caret::before {
+.answer-toggle .caret::before {
   content: "▸";
   display: inline-block;
+  transform: translateY(-1px);
   transition: transform .2s ease;
 }
+[data-open="true"] .answer-toggle .caret::before {
+  transform: rotate(90deg) translateY(0);
+}
 
-blockquote.answer[data-open="true"] .answer-toggle .caret::before,
-blockquote.answer-title[data-open="true"] .answer-toggle .caret::before {
-  transform: rotate(90deg);
+/* 접힘/펼침 상태에 따른 콘텐츠 표시 + 간격 */
+.answer-content {
+  display: none;
+  margin-top: .375rem;
+}
+[data-open="true"] .answer-content {
+  display: block;
+  border-top: 1px dashed rgba(0,0,0,.10);
+  padding-top: .375rem;
+}
+@media (prefers-color-scheme: dark) {
+  [data-open="true"] .answer-content {
+    border-top-color: rgba(255,255,255,.15);
+  }
+}
+
+/* 프린트: 정답은 항상 표시 */
+@media print {
+  .answer-toggle { display: none !important; }
+  .answer-content { display: block !important; }
 }
