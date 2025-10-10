@@ -26,6 +26,9 @@ callouts:
   info:
     title: 정보
     color: blue
+  answer:
+    title: 정답
+    color: green
 
 # 필요시 Mermaid 다이어그램 지원 예시
 # mermaid:

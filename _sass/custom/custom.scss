@@ -1,0 +1,44 @@
+/* --- Answer callout toggle styles --- */
+blockquote.answer, blockquote.answer-title {
+  position: relative;
+  padding-top: .5rem; /* 버튼과 내용 사이 여백 */
+}
+
+/* 토글 버튼(콜아웃 상단에 삽입) */
+blockquote.answer .answer-toggle,
+blockquote.answer-title .answer-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  font-weight: 700;
+  margin: 0 0 .25rem 0;
+  padding: 0;
+}
+
+/* 접힘/펼침 상태에 따른 콘텐츠 표시 */
+blockquote.answer .answer-content,
+blockquote.answer-title .answer-content {
+  display: none;
+  margin-top: .25rem;
+}
+
+blockquote.answer[data-open="true"] .answer-content,
+blockquote.answer-title[data-open="true"] .answer-content {
+  display: block;
+}
+
+/* 캐럿 아이콘 */
+blockquote.answer .answer-toggle .caret::before,
+blockquote.answer-title .answer-toggle .caret::before {
+  content: "▸";
+  display: inline-block;
+  transition: transform .2s ease;
+}
+
+blockquote.answer[data-open="true"] .answer-toggle .caret::before,
+blockquote.answer-title[data-open="true"] .answer-toggle .caret::before {
+  transform: rotate(90deg);
+}
