@@ -1,61 +1,42 @@
+/* --- Answer Toggle minimal --- */
 blockquote.answer,
 blockquote.answer-title,
 p.answer,
 p.answer-title {
   position: relative;
-  margin: 0.75rem 0;
-  padding: 0.75rem 1rem;
-  border-left: 4px solid var(--color-border-note);
-  border-radius: 6px;
-  background-color: var(--color-bg-note, rgba(0,0,0,0.03));
 }
 
-/* remove dotted line etc. */
+/* 타이틀 줄 (버튼 아님) */
+.answer-wrap {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  color: inherit;
+}
+
+/* 화살표 */
+.answer-wrap .caret::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: .4rem;
+  transition: transform .2s ease;
+}
+[data-open="true"] .answer-wrap .caret::before {
+  transform: rotate(90deg);
+}
+
+/* 내용 */
 .answer-content {
   display: none;
-  margin-top: 0.5rem;
+  margin-top: .4rem;
 }
 [data-open="true"] .answer-content {
   display: block;
 }
 
-/* header line — not a button */
-.answer-wrap {
-  display: flex;
-  align-items: center;
-  font-weight: 600;
-  color: var(--color-accent);
-  cursor: pointer;
-  user-select: none;
-}
-
-/* caret icon */
-.answer-wrap::before {
-  content: "▸";
-  display: inline-block;
-  margin-right: 0.5rem;
-  transform: translateY(-1px);
-  transition: transform 0.2s ease;
-}
-[data-open="true"] .answer-wrap::before {
-  transform: rotate(90deg) translateY(0);
-}
-
-/* subtle hover feedback */
-.answer-wrap:hover {
-  text-decoration: underline;
-}
-
-/* dark mode harmony */
-@media (prefers-color-scheme: dark) {
-  blockquote.answer,
-  blockquote.answer-title {
-    border-left-color: var(--color-border-note, #6cb3fa);
-    background-color: rgba(255,255,255,0.05);
-  }
-}
-
-/* print: always show answers */
+/* 인쇄 시 항상 표시 */
 @media print {
   .answer-wrap::before { content: none; }
   .answer-content { display: block !important; }
