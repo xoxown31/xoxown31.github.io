@@ -1,73 +1,62 @@
-/* --- Answer callout toggle styles (supports blockquote & p) --- */
 blockquote.answer,
 blockquote.answer-title,
 p.answer,
 p.answer-title {
   position: relative;
-  margin: .75rem 0;
-  padding-top: .5rem; /* 버튼과 내용 사이 여백 */
+  margin: 0.75rem 0;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid var(--color-border-note);
+  border-radius: 6px;
+  background-color: var(--color-bg-note, rgba(0,0,0,0.03));
 }
 
-/* 버튼/헤더 래퍼 */
-.answer-wrap {
-  display: flex;
-  align-items: center;
-  gap: .5rem;
-}
-
-/* 토글 버튼(콜아웃 상단에 삽입) */
-.answer-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: .4rem;
-  appearance: none;
-  border: 0;
-  background: transparent;
-  font: inherit;
-  font-weight: 600;
-  line-height: 1.2;
-  padding: 0;
-  color: inherit;              /* callout 팔레트 색과 자연스럽게 조화 */
-  cursor: pointer;
-}
-.answer-toggle:hover {
-  text-decoration: underline;  /* 시각적 피드백 */
-}
-.answer-toggle:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-
-/* 캐럿 아이콘 */
-.answer-toggle .caret::before {
-  content: "▸";
-  display: inline-block;
-  transform: translateY(-1px);
-  transition: transform .2s ease;
-}
-[data-open="true"] .answer-toggle .caret::before {
-  transform: rotate(90deg) translateY(0);
-}
-
-/* 접힘/펼침 상태에 따른 콘텐츠 표시 + 간격 */
+/* remove dotted line etc. */
 .answer-content {
   display: none;
-  margin-top: .375rem;
+  margin-top: 0.5rem;
 }
 [data-open="true"] .answer-content {
   display: block;
-  border-top: 1px dashed rgba(0,0,0,.10);
-  padding-top: .375rem;
 }
+
+/* header line — not a button */
+.answer-wrap {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: var(--color-accent);
+  cursor: pointer;
+  user-select: none;
+}
+
+/* caret icon */
+.answer-wrap::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 0.5rem;
+  transform: translateY(-1px);
+  transition: transform 0.2s ease;
+}
+[data-open="true"] .answer-wrap::before {
+  transform: rotate(90deg) translateY(0);
+}
+
+/* subtle hover feedback */
+.answer-wrap:hover {
+  text-decoration: underline;
+}
+
+/* dark mode harmony */
 @media (prefers-color-scheme: dark) {
-  [data-open="true"] .answer-content {
-    border-top-color: rgba(255,255,255,.15);
+  blockquote.answer,
+  blockquote.answer-title {
+    border-left-color: var(--color-border-note, #6cb3fa);
+    background-color: rgba(255,255,255,0.05);
   }
 }
 
-/* 프린트: 정답은 항상 표시 */
+/* print: always show answers */
 @media print {
-  .answer-toggle { display: none !important; }
+  .answer-wrap::before { content: none; }
   .answer-content { display: block !important; }
 }
