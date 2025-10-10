@@ -1,10 +1,4 @@
-/* callout 기본 스타일 유지 */
-blockquote.answer,
-p.answer {
-  position: relative;
-}
-
-/* 타이틀 (첫 번째 문단) */
+/* 타이틀 줄 (첫 번째 문단) */
 .answer-title-line {
   font-weight: 700;
   cursor: pointer;
@@ -13,7 +7,7 @@ p.answer {
   user-select: none;
 }
 
-/* 화살표 추가 */
+/* 화살표 */
 .answer-title-line::before {
   content: "▸";
   display: inline-block;
