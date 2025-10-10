@@ -6,6 +6,6 @@ grand_parent: Mathematics
 nav_order: 1
 ---
 
-# 1. 선형 방정식 (Linear Equations)
+# 📘 1. 선형 방정식 (Linear Equations in Linear Algebra)
 
-선형 방정식은 변수들이 1차식으로 표현된 방정식을 의미합니다. 선형 방적식과 그 해법에 대해 알아봅시다.
+선형 방정식은(는) 이 장에서 다룰 핵심 주제입니다. 간단한 개념 설명을 확인해봅시다.
