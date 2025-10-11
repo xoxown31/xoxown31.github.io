@@ -4,53 +4,37 @@
   window.__AnswerToggleInit = true;
 
   function enhance(el, idx) {
-    // 1️⃣ p 구조 확보
     const paragraphs = el.querySelectorAll(':scope > p');
-    if (paragraphs.length === 0) return;
+    if (paragraphs.length < 2) return;
 
     const title = paragraphs[0];
     const rest = Array.from(paragraphs).slice(1);
 
-    // 2️⃣ MathJax script를 제외한 첫 텍스트 노드만 라벨로 추출
-    let label = '정답 보기';
-    for (const node of title.childNodes) {
-      if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
-        label = node.textContent.trim();
-        node.remove(); // 원래 텍스트 제거 (중복 방지)
-        break;
-      }
-    }
-
-    // 3️⃣ 본문 컨테이너 생성
+    // 본문 wrapper
     const content = document.createElement('div');
     content.className = 'answer-content';
     rest.forEach(p => content.appendChild(p));
 
-    // 4️⃣ 상태 키 및 복원
+    // 상태 저장
     const uid = el.id || `answer-${idx}-${Math.random().toString(36).slice(2, 6)}`;
     const key = `jtd-answer:${location.pathname}#${uid}`;
     const saved = localStorage.getItem(key);
     const isOpen = saved === '1';
     el.setAttribute('data-open', isOpen ? 'true' : 'false');
 
-    // 5️⃣ 타이틀 라인 세팅
+    // 타이틀 line
     title.classList.add('answer-title-line');
     title.setAttribute('tabindex', '0');
     title.setAttribute('role', 'button');
     title.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
 
-    // 화살표 아이콘 추가 (맨 앞)
+    // 화살표 추가
     const caret = document.createElement('span');
     caret.className = 'caret';
     caret.setAttribute('aria-hidden', 'true');
     title.prepend(caret);
 
-    // 만약 label이 완전히 제거되었으면 텍스트 노드 추가
-    if (!title.textContent.trim()) {
-      title.appendChild(document.createTextNode(label));
-    }
-
-    // 6️⃣ 클릭 시 토글
+    // toggle
     const toggle = () => {
       const nowOpen = el.getAttribute('data-open') !== 'true';
       el.setAttribute('data-open', nowOpen ? 'true' : 'false');
@@ -62,7 +46,7 @@
       if (e.key === ' ' || e.key === 'Enter') toggle();
     });
 
-    // 7️⃣ 본문 삽입
+    // 본문 추가
     el.appendChild(content);
   }
 
@@ -72,7 +56,19 @@
     list.forEach((el, i) => enhance(el, i));
   }
 
-  if (document.readyState === 'loading')
-    document.addEventListener('DOMContentLoaded', initWhenReady);
-  else initWhenReady();
+  // ✅ 핵심 부분: MathJax 렌더링 완료 후 실행
+  function runAfterMathJax() {
+    if (window.MathJax && MathJax.startup && MathJax.startup.promise) {
+      MathJax.startup.promise.then(() => {
+        initWhenReady();
+      });
+    } else {
+      // MathJax가 없는 경우 fallback
+      if (document.readyState === 'loading')
+        document.addEventListener('DOMContentLoaded', initWhenReady);
+      else initWhenReady();
+    }
+  }
+
+  runAfterMathJax();
 })();
