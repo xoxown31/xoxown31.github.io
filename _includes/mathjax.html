@@ -1,9 +1,30 @@
-<!-- Automatically display code inside script tags with type=math/tex using MathJax -->
-<script type="text/javascript" defer
-  src="{{ site.baseurl }}/assets/js/mathjax-script-type.js">
+<!-- 1️⃣ MathJax 설정 (항상 MathJax 본체보다 먼저 로드) -->
+<script type="text/javascript">
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  options: {
+    renderActions: {
+      findScript: [10, function (doc) {
+        for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+          const display = !!node.type.match(/; *mode=display/);
+          const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+          const text = document.createTextNode('');
+          node.parentNode.replaceChild(text, node);
+          math.start = {node: text, delim: '', n: 0};
+          math.end = {node: text, delim: '', n: 0};
+          doc.math.push(math);
+        }
+      }, '']
+    }
+  },
+  chtml: { scale: 1.05 }
+};
 </script>
 
-<!-- Copied from https://docs.mathjax.org/en/latest/web/components/combined.html -->
+<!-- 2️⃣ MathJax 본체 (CommonHTML 렌더러 사용) -->
 <script type="text/javascript" id="MathJax-script" defer
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
 </script>
