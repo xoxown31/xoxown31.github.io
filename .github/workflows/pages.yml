@@ -25,7 +25,7 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
       - run: python build.py
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
