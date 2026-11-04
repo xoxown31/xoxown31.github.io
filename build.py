@@ -59,6 +59,9 @@ def main():
         rows.append(f'<tr><td>{date}</td><td><a href="{href}">{html.escape(title)}</a></td></tr>')
         print("built", href)
 
+    if not rows:
+        rows.append('<tr><td class="small">Nothing yet.</td></tr>')
+
     index = (ROOT / "templates" / "index.html").read_text(encoding="utf-8")
     index = index.replace("{{NOTES}}", "\n".join(rows))
     index = index.replace("{{UPDATED}}", datetime.date.today().isoformat())
