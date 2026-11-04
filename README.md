@@ -4,8 +4,8 @@ Personal page and study notes.
 
 ## Writing a note
 
-1. Add a notebook to `notes/` named `YYYY-MM-DD-slug.ipynb`.
-2. Its first markdown cell starts with `# Title` (used on the index).
+1. Copy `templates/note-template.ipynb` to `notes/YYYY-MM-DD-slug.ipynb`.
+2. Fill it in. Format and rules: [`notes/README.md`](notes/README.md).
 3. Push to `main`.
 
 GitHub Actions re-executes every notebook from scratch, renders it with
